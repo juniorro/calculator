@@ -1,6 +1,7 @@
 
 # Calculator Project Setup
-
+# Note
+Having lots of issues with Travis CI
 Run Pip Install
 pip install -r requirements.txt
 
