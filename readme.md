@@ -1,6 +1,5 @@
 # Calculator Project Setup
 [![Build Status](https://app.travis-ci.com/juniorro/calculator.svg?branch=master)](https://app.travis-ci.com/juniorro/calculator)
-
 Run Pip Install
 pip install -r requirements.txt
 
