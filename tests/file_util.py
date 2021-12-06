@@ -9,5 +9,6 @@ def get_log_file_write(filename, data):
     with open("data/log/" + filename, 'w') as csvfile:
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(["timestamp", "filename", "record_number", "operation", "result"])
-        csvwriter.writerow(data)
-        return csv.writer(csvfile)
+        csvwriter.writerow([data])
+        csv.writer(csvfile)
+        csvfile.close()

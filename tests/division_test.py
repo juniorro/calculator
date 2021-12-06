@@ -12,8 +12,8 @@ def test_calculation_division():
     #Act
     division = Division(mynumbers)
     #Assert
-    get_log_file_write("result.log", str(get_time()) + "division_test" + str(random.randint(10, 1000)) + "division" + str(division.get_result()))
+    get_log_file_write("division_test.log", str(get_time()) + ",division_test.py," + str(random.randint(10, 1000)) + ",division," + str(division.get_result()))
     assert division.get_result() == 20
 
 def get_time():
-    return datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+    return datetime.datetime.now().strftime("%m/%d/%Y:%H:%M:%S")

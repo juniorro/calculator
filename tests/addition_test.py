@@ -12,8 +12,8 @@ def test_calculation_addition():
     #Act
     addition = Addition(mynumbers)
     #Assert
-    get_log_file_write("result.log", str(get_time()) + "addition_test" + str(random.randint(10, 1000)) + "addition" + str(addition.get_result()))
+    get_log_file_write("addition_test.log", str(get_time()) + ",addition_test.py," + str(random.randint(10, 1000)) + ",addition," + str(addition.get_result()))
     assert addition.get_result() == 70
 
 def get_time():
-    return datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+    return datetime.datetime.now().strftime("%m/%d/%Y:%H:%M:%S")

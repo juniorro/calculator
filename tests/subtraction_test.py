@@ -12,8 +12,8 @@ def test_calculation_subtraction():
     #Act
     subtraction = Subtraction(mynumbers)
     #Assert
-    get_log_file_write("result.log", str(get_time()) + "subtraction_test" + str(random.randint(10, 1000)) + "subtraction" + str(subtraction.get_result()))
+    get_log_file_write("subtraction_test.log", str(get_time()) + ",subtraction_test.py," + str(random.randint(10, 1000)) + ",subtraction," + str(subtraction.get_result()))
     assert subtraction.get_result() == -116
 
 def get_time():
-    return datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+    return datetime.datetime.now().strftime("%m/%d/%Y:%H:%M:%S")

@@ -12,8 +12,8 @@ def test_calculation_multiplication():
     #Act
     multiplication = Multiplication(mynumbers)
     #Assert
-    get_log_file_write("result.log", str(get_time()) + "multiplication_test" + str(random.randint(10, 1000)) + "multiplication" + str(multiplication.get_result()))
+    get_log_file_write("multiplication_test.log", str(get_time()) + ",multiplication_test.py," + str(random.randint(10, 1000)) + ",multiplication," + str(multiplication.get_result()))
     assert multiplication.get_result() == 90000
 
 def get_time():
-    return datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
+    return datetime.datetime.now().strftime("%m/%d/%Y:%H:%M:%S")
