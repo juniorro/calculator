@@ -8,12 +8,12 @@ def test_calculation_division():
     """ Testing static method for division """
     #Arrange
     data = get_csv_data("division.csv")
-    mynumbers = tuple(data[0])
+    mynumbers = (tuple(data[0])[0], tuple(data[0])[1])
     #Act
     division = Division(mynumbers)
     #Assert
     get_log_file_write("division_test.log", str(get_time()) + ",division_test.py," + str(random.randint(10, 1000)) + ",division," + str(division.get_result()))
-    assert division.get_result() == 20
+    assert division.get_result() == 50
 
 def get_time():
     return datetime.datetime.now().strftime("%m/%d/%Y:%H:%M:%S")

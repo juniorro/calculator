@@ -8,12 +8,12 @@ def test_calculation_multiplication():
     """ Testing static method for multiplication """
     #Arrange
     data = get_csv_data("multiplication.csv")
-    mynumbers = tuple(data[0])
+    mynumbers = (tuple(data[0])[0], tuple(data[0])[1])
     #Act
     multiplication = Multiplication(mynumbers)
     #Assert
     get_log_file_write("multiplication_test.log", str(get_time()) + ",multiplication_test.py," + str(random.randint(10, 1000)) + ",multiplication," + str(multiplication.get_result()))
-    assert multiplication.get_result() == 90000
+    assert multiplication.get_result() == 300
 
 def get_time():
     return datetime.datetime.now().strftime("%m/%d/%Y:%H:%M:%S")
