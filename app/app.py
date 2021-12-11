@@ -1,5 +1,5 @@
 """ Web application entry point """
-from flask import Flask, render_template, flash, request
+from flask import Flask, render_template, flash, request, url_for
 
 app = Flask(__name__)
 # app.run(debug=True, use_debugger=False, use_reloader=True)
@@ -11,7 +11,7 @@ def index():
 
 @app.route("/calculator", methods=['GET'])
 def calculator():
-    return render_template('index.html')
+    return render_template('calculator.html')
 
 @app.route("/calculate", methods=['POST'])
 def calculate():

@@ -1,26 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<form action="/calculate" method="POST">
-  <div class="form-row">
-    <div class="form-group col-lg-4">
-      <label for="firstNumber">First Number</label>
-      <input type="text" class="form-control" name="first-value">
-    </div>
-    <div class="form-group col-lg-4">
-      <label for="operation">Operation</label>
-      <select name="operation" class="form-control">
-        <option selected disabled>choose one</option>
-        <option>addition</option>
-        <option>subtraction</option>
-        <option>multiplication</option>
-        <option>division</option>
-      </select>
-    </div>
-    <div class="form-group col-lg-6">
-      <label for="secondNumber">Second Number</label>
-      <input type="text" class="form-control" name="second-value">
-    </div>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">IS 601851- Project 3</h1>
+    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+    <p><a class="btn btn-primary btn-lg" href="/calculator" role="button">Calculator &raquo;</a></p>
   </div>
-  <input type="submit" class="btn btn-primary" value="Calculate">
-</form>
+</div>
+
+
 {% endblock content %}
