@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h4 class="display-4">Result</h4>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">First Number</th>
+      <th scope="col">Second Number</th>
+      <th scope="col">Operation</th>
+      <th scope="col">Result</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in range(0, size) %}
+    <tr>
+      {% for elem in data[i] %}
+        <td>{{elem}}</td>
+      {% endfor %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}
