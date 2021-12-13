@@ -49,5 +49,5 @@ def get_result(first_number, second_number, operation):
 
 @app.errorhandler(ZeroDivisionError)
 def handle_error(exception):
-    flash('Cannot divide by 0. You know that. Please try again.')
+    flash('Cannot divide by 0. Please try again.')
     return redirect(url_for('calculator'))

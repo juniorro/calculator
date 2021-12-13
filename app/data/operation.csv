@@ -4,3 +4,4 @@ first_number,second_number,operation,result
 23.89,1.25,multiplication,29.8625
 100,500,multiplication,50000.0
 100,500,subtraction,-400.0
+100,0,multiplication,0.0
