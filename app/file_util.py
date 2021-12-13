@@ -11,11 +11,14 @@ def get_log_file_write(data):
         csvwriter.writerow([data])
         csv.writer(csvfile)
         csvfile.close()
+         
+def write_to_file(dataframe):
+    df = pd.DataFrame(dataframe, columns = ['first_number', 'second_number', 'operation', 'result'])
+    df.to_csv(r"data/operation.csv", mode = 'a', header = False, index = False)
 
-# data = get_csv_data("addition.csv")
-# mynumbers = (tuple(data[0])[0], tuple(data[0])[1])
-# mynum = data[0]
-# print(mynum)
+# data = get_csv_data("operation.csv")
+# write_to_file(data)
+
 # thedata = tuple(data)
 # for n in thedata:
     # print(n)

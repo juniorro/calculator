@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
+<div>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+          {{message}}
+          </div>
+          {% endfor %}
+        {% endif %}
+ {% endwith %}
+</div>
 <form action="/result" method="POST">
   <div class="form-row">
     <div class="form-group col-lg-4">
@@ -9,7 +21,6 @@
     <div class="form-group col-lg-4">
       <label for="operation">Operation</label>
       <select name="operation" class="form-control">
-        <option selected disabled>choose one</option>
         <option>addition</option>
         <option>subtraction</option>
         <option>multiplication</option>
