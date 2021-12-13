@@ -1,6 +1,6 @@
 first_number,second_number,operation,result
 100,20,addition,120.0
-25,12,subtraction,13.0
-12.9,4,subtraction,8.9
-34,123,multiplication,4182.0
-556.008,0.766,subtraction,555.2420000000001
+10,8,subtraction,2.0
+43,2,multiplication,86.0
+345,23,division,15.0
+56,4,division,14.0
