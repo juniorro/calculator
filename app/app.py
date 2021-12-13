@@ -28,6 +28,13 @@ def calculate():
         flash('Please enter 2 numbers and an operation')
         return redirect(url_for('calculator'))
 
+@app.route('/history', methods=['GET'])
+def history():
+    file = get_csv_data('operation.csv')
+    data = tuple(file)
+    size = len(data)
+    return render_template('result.html', size=size, data=data)
+
 def get_result(first_number, second_number, operation):
     first = float(first_number)
     second = float(second_number)
